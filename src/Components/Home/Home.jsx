@@ -5,7 +5,11 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <h2 className="text-6xl text-center">Our Services</h2>
+
+      <h2 className="mt-12 font-bold text-4xl lg:text-6xl text-center text-yellow-950">
+        Our Services
+        <hr />
+      </h2>
       <OurAllServices></OurAllServices>
     </div>
   );

@@ -21,7 +21,7 @@ const ServiceDetails = () => {
     <>
       <div style={backgroundStyle}>
         <h2 className="text-3xl p-6 lg:text-5xl text-white text-center font-bold">
-          <span className="text-6xl">{selectedService.name}</span>
+          <span className="text-5xl lg:text-6xl">{selectedService.name}</span>
         </h2>
       </div>
       <section className="container mx-auto p-4">

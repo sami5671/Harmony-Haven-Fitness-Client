@@ -7,7 +7,14 @@ const ServicesCard = ({ cards }) => {
     <>
       <div className="card bg-base-100 shadow-xl">
         <figure>
-          <img className="w-[400px] h-[200px]" src={image} alt="Shoes" />
+          <img
+            className="w-[400px] h-[200px]"
+            src={image}
+            alt="Shoes"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>

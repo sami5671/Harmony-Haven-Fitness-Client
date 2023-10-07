@@ -9,7 +9,7 @@ const Banner = () => {
             <h2 className="text-3xl p-6 lg:text-5xl text-yellow-950 text-center font-bold">
               <span className="text-6xl">Welcome To</span>
               <br />
-              "Harmony Haven Fitness"
+              "Harmony Haven" <br /> Yoga and Fitness Retreats
             </h2>
           </div>
         </div>

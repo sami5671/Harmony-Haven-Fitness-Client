@@ -76,26 +76,28 @@ const Navbar = () => {
           </div>
 
           {/* sign in and out */}
-          <div>
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-6 lg:w-10 rounded-full">
-                <img src={userPicture} alt="" />
-              </div>
-            </label>
-          </div>
+
           {/* checking the user is present(if present the Button will show logout otherwise will show login in the system) */}
           {user ? (
             <>
+              <div>
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-6 lg:w-10 rounded-full">
+                    <img src={userPicture} alt="" />
+                  </div>
+                </label>
+              </div>
               <div className="hidden lg:block">
                 <span>{user.email}</span>
               </div>
+
               <button onClick={handleLogout} className="btn btn-ghost">
                 LOG OUT
               </button>
             </>
           ) : (
             <Link to="/login">
-              <button className="btn btn-ghost">LOGIN</button>
+              <button className="btn font-bold">LOGIN HERE</button>
             </Link>
           )}
           {/* sign in and out */}
