@@ -1,6 +1,27 @@
 import { Link, NavLink } from "react-router-dom";
 import userPicture from "../../assets/userlogo.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
+import swal from "sweetalert";
 const Navbar = () => {
+  // destructure the AuthContext
+  const { user, logout } = useContext(AuthContext);
+
+  // ==========================For Logging out =================================================
+  const handleLogout = () => {
+    logout()
+      .then(() => {
+        swal({
+          text: "Successfully Registered",
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        swal({
+          text: ("Have some issues", error.message),
+        });
+      });
+  };
   const links = (
     <>
       <li>
@@ -51,21 +72,32 @@ const Navbar = () => {
             />
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-12 gap-10">{links}</ul>
+            <ul className="menu menu-horizontal px-2 gap-10">{links}</ul>
           </div>
 
           {/* sign in and out */}
           <div>
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
+              <div className="w-6 lg:w-10 rounded-full">
                 <img src={userPicture} alt="" />
               </div>
             </label>
-
-            <Link to="/login">
-              <button className="btn btn-ghost">Login</button>
-            </Link>
           </div>
+          {/* checking the user is present(if present the Button will show logout otherwise will show login in the system) */}
+          {user ? (
+            <>
+              <div className="hidden lg:block">
+                <span>{user.email}</span>
+              </div>
+              <button onClick={handleLogout} className="btn btn-ghost">
+                LOG OUT
+              </button>
+            </>
+          ) : (
+            <Link to="/login">
+              <button className="btn btn-ghost">LOGIN</button>
+            </Link>
+          )}
           {/* sign in and out */}
         </div>
         {/* Navbar end here  */}
