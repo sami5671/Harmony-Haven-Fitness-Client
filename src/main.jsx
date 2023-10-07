@@ -8,6 +8,8 @@ import Home from "./Components/Home/Home.jsx";
 import Activities from "./Components/Activities/Activities";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import ServiceDetails from "./Components/OurAllServices/ServiceDetails";
+import Login from "./Components/Providers/Login";
+import Register from "./Components/Providers/Register";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
         path: "/ServicesCard/:id",
         element: <ServiceDetails></ServiceDetails>,
         loader: () => fetch("/public/cards.json"),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
       {
         path: "/activities",
