@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Sunrise Yoga",
+    "image": "/public/sunriseYoga.jpg",
+    "price": 50.0,
+    "description": "Start your day with energizing sunrise yoga sessions by the beach. Immerse yourself in the serenity of the morning waves as you practice yoga poses that invigorate your body and mind. Connect with nature and find inner peace as the sun rises on the horizon."
+  },
+  {
+    "id": 2,
+    "name": "Meditation Retreat",
+    "image": "/public/MeditationRetreat.jpeg",
+    "price": 60.0,
+    "description": "Deepen your practice with guided meditation sessions in a serene forest setting. Experience profound tranquility as you meditate amidst ancient trees and flowing streams. Our expert instructors will help you explore mindfulness and inner calm, leaving you rejuvenated and centered."
+  },
+  {
+    "id": 3,
+    "name": "Hiking Adventures",
+    "image": "/public/HikingAdventures.jpg",
+    "price": 75.0,
+    "description": "Embark on exciting hiking adventures to explore the natural beauty of the area. Discover breathtaking vistas, hidden waterfalls, and lush trails as you connect with the great outdoors. Our knowledgeable guides ensure safe and memorable journeys for all hikers."
+  },
+  {
+    "id": 4,
+    "name": "Nutrition Workshops",
+    "image": "/public/NutritionWorkshops.jpg",
+    "price": 40.0,
+    "description": "Learn about healthy eating habits and mindful nutrition in informative workshops. Delve into the world of balanced eating, understanding ingredients, and creating nourishing meals. Gain practical knowledge and insights for a healthier lifestyle."
+  },
+  {
+    "id": 5,
+    "name": "Fitness Bootcamp",
+    "image": "/public/FitnessBootcamp.jpeg",
+    "price": 90.0,
+    "description": "Get in shape with intensive fitness bootcamp sessions led by certified trainers. Challenge your fitness limits with high-intensity workouts, strength training, and personalized coaching. Transform your physique and build endurance in a motivating group environment."
+  },
+  {
+    "id": 6,
+    "name": "Spa and Relaxation",
+    "image": "/public/SpaandRelaxation.jpg",
+    "price": 70.0,
+    "description": "Indulge in relaxation with spa treatments and wellness therapies. Rejuvenate your body and mind with soothing massages, rejuvenating facials, and holistic wellness experiences. Let our spa professionals pamper you, leaving you refreshed and revitalized."
+  }
+]
