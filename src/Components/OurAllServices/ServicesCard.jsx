@@ -5,7 +5,7 @@ const ServicesCard = ({ cards }) => {
   const { id, name, image, price, description } = cards;
   return (
     <>
-      <div className="card bg-base-100 shadow-xl">
+      <div className="card bg-base-100 shadow-2xl">
         <figure>
           <img
             className="w-[400px] h-[200px]"
@@ -16,13 +16,17 @@ const ServicesCard = ({ cards }) => {
             data-aos-duration="2000"
           />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">{name}</h2>
-          <p>Price: {price} $</p>
+        <div className="card-body" data-aos="fade-up-right">
+          <h2 className="card-title text-lime-500 text-2xl">{name}</h2>
+          <p>
+            <span className="text-lime-500 font-bold">Price:</span> {price} $
+          </p>
           <p>{description}</p>
-          <div className="card-actions justify-end">
+          <div className="card-actions justify-center">
             <Link to={`/ServicesCard/${id}`}>
-              <button className="btn btn-primary">View Details</button>
+              <button className="btn mt-4 hover:bg-lime-400 hover:text-white hover:font-bold">
+                View Details
+              </button>
             </Link>
           </div>
         </div>

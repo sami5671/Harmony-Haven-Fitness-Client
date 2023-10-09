@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Zen Yoga Retreat",
+    "image": "/public/zenyoga.png",
+    "status": "Coming Soon",
+    "description": "Experience serenity in our Zen Yoga Retreat. Find inner peace and balance in the tranquil embrace of nature."
+  },
+  {
+    "id": 2,
+    "title": "Beach Yoga & Meditation",
+    "image": "/public/beachyoga.png",
+    "status": "Available",
+    "description": "Relax and rejuvenate with Beach Yoga & Meditation. Unwind while connecting with the soothing waves of the sea."
+  },
+  {
+    "id": 3,
+    "title": "Mountain Hiking & Yoga",
+    "image": "/public/mountainyoga.png",
+    "status": "All Reserved",
+    "description": "Embark on an adventure with Mountain Hiking & Yoga. Explore majestic trails and elevate your yoga experience."
+  },
+  {
+    "id": 4,
+    "title": "Sunrise Yoga by the Lake",
+    "image": "/public/sunriseyogaaa.jpg",
+    "status": "Coming Soon",
+    "description": "Witness the breathtaking sunrise during Yoga by the serene lake. An unforgettable experience in nature's embrace."
+  },
+  {
+    "id": 5,
+    "title": "Eco-Friendly Yoga Retreat",
+    "image": "/public/ecofriendly.jpg",
+    "status": "Available",
+    "description": "Join our Eco-Friendly Yoga Retreat and connect with nature while promoting a sustainable and mindful lifestyle."
+  },
+  {
+    "id": 6,
+    "title": "Yoga & Spa Weekend",
+    "image": "/public/yogaspawekend.jpg",
+    "status": "Available",
+    "description": "Indulge in self-care with our Yoga & Spa Weekend. Replenish your energy with yoga sessions and rejuvenating spa treatments."
+  },
+  {
+    "id": 7,
+    "title": "Inner Balance Retreat",
+    "image": "/public/innerbalance.jpg",
+    "status": "All Reserved",
+    "description": "Rediscover inner harmony in our exclusive Inner Balance Retreat. Realign your mind, body, and soul in a tranquil environment."
+  },
+  {
+    "id": 8,
+    "title": "Meditation & Mindfulness Camp",
+    "image": "/public/meditationandmindfull.jpg",
+    "status": "Coming Soon",
+    "description": "Join our Meditation & Mindfulness Camp to learn techniques for clarity and calmness. Cultivate a peaceful and focused mind."
+  },
+  {
+    "id": 9,
+    "title": "Luxury Yoga Cruise",
+    "image": "/public/luxaryyoga.jpg",
+    "status": "Available",
+    "description": "Sail on a Luxury Yoga Cruise. Practice yoga on deck while savoring breathtaking ocean views, a truly luxurious wellness experience."
+  }
+]

@@ -8,7 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
   // ====================Adding the background Style=================
   const bgStyle = {
-    backgroundImage: `url('/src/assets/logobanner.png')`,
+    backgroundImage: `url('/public/logobanner.png')`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     position: "relative",
@@ -23,12 +23,16 @@ const Login = () => {
   };
   // ====================Adding the background Style=================
   // ====================Destructuring the object=======================================
-  const { signInUser, signInWithGoogle } = useContext(AuthContext);
+  const { signInUser, signInWithGoogle, signInWithGitHub } =
+    useContext(AuthContext);
   // =====================For getting the value from user=========================================================
   const handleLogin = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
+
+    event.target.email.value = "";
+    event.target.password.value = "";
 
     //==================Create user in firebase==============================================================
     signInUser(email, password)
@@ -47,6 +51,7 @@ const Login = () => {
         });
       });
   };
+
   // =================================Handle Google Sign In================================================================
   const handleGoogleSignIn = () => {
     signInWithGoogle()
@@ -55,6 +60,25 @@ const Login = () => {
         swal({
           text: "Successfully Login!!!",
         });
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+        swal({
+          text: ("Have some issues", error.message),
+        });
+      });
+  };
+  // =================================================================================================
+  // =================================Handle GitHub Sign In================================================================
+  const handleGitHubSignIn = () => {
+    signInWithGitHub()
+      .then((result) => {
+        console.log(result.user);
+        swal({
+          text: "Successfully Login!!!",
+        });
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -127,7 +151,7 @@ const Login = () => {
                 <button onClick={handleGoogleSignIn} className="btn btn-ghost">
                   <AiFillGoogleCircle></AiFillGoogleCircle> Google
                 </button>
-                <button className="btn btn-ghost">
+                <button onClick={handleGitHubSignIn} className="btn btn-ghost">
                   <AiFillGithub></AiFillGithub>GitHub
                 </button>
               </p>

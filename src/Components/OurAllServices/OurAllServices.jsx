@@ -10,10 +10,10 @@ const OurAllServices = () => {
       .then((data) => setServices(data));
   }, []);
 
-  console.log(services);
+  // console.log(services);
   return (
     <>
-      <section className="container p-4 md:p-16 mx-auto mt-12 lg:mt-8">
+      <section className="p-4 md:p-16 mx-auto mt-12 lg:mt-8">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {services.map((cards) => (
             <ServicesCard key={cards.id} cards={cards}></ServicesCard>

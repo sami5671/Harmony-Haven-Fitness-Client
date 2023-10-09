@@ -26,12 +26,14 @@ const ServiceDetails = () => {
       </div>
       <section className="container mx-auto p-4">
         {/* all details */}
-        <div className="flex flex-col lg:flex-row mt-16 mb-24">
-          <div>
-            <h2 className="text-2xl">{selectedService.name}</h2>
-            <p>
-              <span>Price: $</span>
-              {selectedService.price}
+        <div className="flex flex-col lg:flex-row mt-16 mb-24 px-4">
+          <div className="lg:w-1/2">
+            <h2 className="text-2xl font-bold lg:text-6xl mb-2">
+              {selectedService.name}
+            </h2>
+            <p className="mb-4">
+              <span className="text-lime-600 font-bold text-2xl">Price: </span>
+              <span className="text-xl"> ${selectedService.price}</span>
             </p>
             <p>{selectedService.description}</p>
             <button className="btn btn-ghost bg-lime-300 text-white mt-4 mb-4">

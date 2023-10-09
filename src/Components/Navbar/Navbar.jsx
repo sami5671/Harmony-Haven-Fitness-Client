@@ -67,7 +67,7 @@ const Navbar = () => {
             </div>
             <img
               className="w-1/2 lg:w-1/6 rounded-lg"
-              src="/src/assets/logo.jpg"
+              src="/public/logo.jpg"
               alt=""
             />
           </div>
@@ -83,12 +83,12 @@ const Navbar = () => {
               <div>
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-6 lg:w-10 rounded-full">
-                    <img src={userPicture} alt="" />
+                    <img src={user.photoURL || userPicture} alt="" />
                   </div>
                 </label>
               </div>
               <div className="hidden lg:block">
-                <span>{user.email}</span>
+                <span>{user.displayName || user.email}</span>
               </div>
 
               <button onClick={handleLogout} className="btn btn-ghost">

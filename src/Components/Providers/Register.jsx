@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import swal from "sweetalert";
@@ -8,7 +8,7 @@ const Register = () => {
   const navigate = useNavigate();
   // ====================Adding the background Style=================
   const bgStyle = {
-    backgroundImage: `url('/src/assets/register2.jpg')`,
+    backgroundImage: `url('/public/register2.jpg')`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     position: "relative",
@@ -39,6 +39,27 @@ const Register = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
 
+    // =====================clear the input field============================================
+    event.target.email.value = "";
+    event.target.password.value = "";
+    // ==================================================================================
+    // Check The password is less than 6 characters, don't have a capital letter, don't have a special character
+    if (password.length < 6) {
+      swal({
+        text: "Password is less than 6 characters!!!!!",
+      });
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      swal({
+        text: "Password must be at least One UpperCase Character!!!!!",
+      });
+      return;
+    } else if (!/^(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{6,}$/.test(password)) {
+      swal({
+        text: "Password must be at least One Special Character!!!!!",
+      });
+      return;
+    }
     //==================Create user in firebase==============================================================
     createUser(email, password)
       .then((result) => {
@@ -46,7 +67,7 @@ const Register = () => {
         swal({
           text: "Successfully Registered",
         });
-        navigate("/login");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
